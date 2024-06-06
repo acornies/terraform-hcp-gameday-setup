@@ -1,6 +1,5 @@
 variable "region" {
   type    = string
-  default = "us-east-2"
 }
 
 variable "event_name" {
@@ -22,7 +21,6 @@ variable "cloud_provider" {
 
 variable "hcp_vault_tier" {
   type    = string
-  default = "dev"
   validation {
     condition     = can(regex("^(dev|starter_small|standard_small)$", var.hcp_vault_tier))
     error_message = "HCP Vault tier must be one of 'dev', 'starter_small', or 'standard_small'."
