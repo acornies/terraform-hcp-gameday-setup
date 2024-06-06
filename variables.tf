@@ -12,7 +12,6 @@ variable "event_name" {
 
 variable "cloud_provider" {
   type    = string
-  default = "aws"
   validation {
     condition     = can(regex("^(aws|azure)$", var.cloud_provider))
     error_message = "Cloud provider must be one of 'aws', or 'azure'."
@@ -29,5 +28,4 @@ variable "hcp_vault_tier" {
 
 variable "hcp_vault_public_endpoint" {
   type    = bool
-  default = "true"
 }
