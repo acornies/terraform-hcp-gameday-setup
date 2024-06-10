@@ -7,8 +7,6 @@ terraform {
   }
 }
 
-provider "hcp" {}
-
 resource "hcp_hvn" "event_cluster" {
   hvn_id         = "${var.event_name}-hvn"
   cloud_provider = var.cloud_provider
